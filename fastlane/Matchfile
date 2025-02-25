@@ -1,0 +1,6 @@
+git_url(ENV["MATCH_REPO"])
+git_branch(ENV["MATCH_BRANCH"])
+storage_mode("git")
+type("appstore") # The default type, can be: appstore, adhoc, enterprise or devel
+app_identifier(ENV["APP_ID"])
+username(ENV["APPLE_IDENTITY_ID"])

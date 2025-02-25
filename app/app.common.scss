@@ -1,0 +1,189 @@
+﻿@use "sass:color";
+@use "sass:math";
+
+.ns-root {
+    // --systemFontScale: 1;
+    --colorPrimary: #FFC82F;
+    --colorOnPrimary: #3F2E00;
+    --colorPrimaryContainer: #FFDF98;
+    --colorOnPrimaryContainer: #251A00;
+    --colorSecondary: #6A5D3F;
+    --colorOnSecondary: #FFFFFF;
+    --colorSecondaryContainer: #F4E0BB;
+    --colorOnSecondaryContainer: #241A04;
+    --colorTertiary: #62597C;
+    --colorOnTertiary: #FFFFFF;
+    --colorTertiaryContainer: #E8DEFF;
+    --colorOnTertiaryContainer: #1E1735;
+    --colorBackground: #FFFBFF;
+    --colorOnBackground: #1E1B16;
+    --colorError: #BA1A1A;
+    --colorOnError: #FFFFFF;
+    --colorErrorContainer: #FFDAD6;
+    --colorOutline: #7E7667;
+    --colorOutlineVariant: #D0C5B4;
+    --colorOnSurfaceDisabled: #00000055;
+    --colorSurfaceVariant: #4D4639;
+    --colorOnSurfaceVariant: #ECE1CF;
+    --colorSurface: #FFFBFF;
+    --colorOnSurface: #1E1B16;
+    --colorOnSurfaceInverse: #FFFBFF;
+    --colorSurfaceContainer: #FFFBFF;
+
+    --mdiFontFamily: #{$mdiFontFamily};
+    --appFontFamily: #{$appFontFamily};
+    --wiFontFamily: #{$wiFontFamily};
+
+    --actionBarButtonHeight: 50;
+    --actionBarHeight: 60;
+}
+
+// .forecastfont {
+//     font-family: $forecastfont-fontFamily;
+// }
+.app {
+    font-family: $appFontFamily;
+}
+
+.wi {
+    font-family: $wiFontFamily;
+}
+
+.mdi {
+    font-family: $mdiFontFamily;
+}
+
+checkbox {
+    color: var(--colorOnSurface);
+    fill-color: var(--colorPrimary);
+    on-check-color: var(--colorOnPrimary);
+    on-tint-color: var(--colorPrimary);
+}
+
+htmllabel,
+canvaslabel,
+label {
+    color: var(--colorOnBackground);
+}
+
+mdtextfield, mdtextview {
+    stroke-color: var(--colorOutline);
+    placeholder-color: var(--colorOutline);
+    color: var(--colorOnSurface);
+}
+
+mdbutton[variant=outline] {
+    // shape: round;
+    // padding: 0;
+    color: var(--colorOnSurface);
+    ripple-color: var(--colorOnSurface);
+
+    // ripple-color: var(--colorOnBackground);
+    // color: var(--colorOnBackground);
+    // ripple-color: gray;
+    // color: black;
+    // .ns-dark &,
+    // .ns-black & {
+    //     color: white;
+    //     ripple-color: white;
+    // }
+}
+
+// mdtextfield {
+// color: black;
+// placeholder-color: black;
+// .ns-dark &,
+// .ns-black & {
+//     color: white;
+//     placeholder-color: white;
+// }
+// }
+
+.dailyViewBorder {
+    height: 1;
+    background-color: var(--colorOutline);
+    // background-color: #ccc;
+    // .ns-dark &,
+    // .ns-black & {
+    //     background-color: #333;
+    // }
+}
+
+frame {
+    background-color: var(--colorBackground);
+}
+
+page,
+.weatherpage,
+.drawer {
+    status-bar-style: light;
+
+    background-color: var(--colorBackground);
+    status-bar-color: var(--colorBackground);
+
+    .ns-dark &,
+    .ns-black & {
+        status-bar-style: dark;
+    }
+}
+
+.actionBar {
+    // background-color: var(--colorBackground);
+    background-color: var(--colorBackground) + 'aa';
+
+    .ns-black & {
+        background-color: scale-color(black, $alpha: -30%);
+    }
+
+    // .ns-dark & {
+    //     background-color: scale-color(#1c1c1e, $alpha: -30%);
+    // }
+    // height: var(--actionBarHeight);
+}
+
+.icon-btn,
+.actionBarButton {
+    @extend .mdi;
+    margin: 0;
+    padding: 0;
+    shape: round;
+    background-color: transparent;
+    width: var(--actionBarButtonHeight);
+    height: var(--actionBarButtonHeight);
+
+    color: var(--colorOnSurface);
+    ripple-color: var(--colorOnSurface);
+    font-size: 24;
+
+    &:disabled {
+        color: var(--colorOutlineVariant);
+        ripple-color: var(--colorOutlineVariant);
+    }
+}
+
+.actionBarTitle {
+    font-size: 20;
+    font-weight: 500;
+}
+
+.actionBarSubtitle {
+    font-size: 13;
+    color: var(--colorOnBackground);
+    // color: #ffffff88;
+}
+
+
+
+.sectionHeader {
+    font-size: 15;
+    font-weight: 500;
+    color: var(--colorPrimary);
+    padding: 5 5 5 16;
+}
+
+.sectionBigHeader {
+    font-size: 20;
+    font-weight: 500;
+    color: var(--colorPrimary);
+    padding: 4 0 10 0;
+}

@@ -1,0 +1,41 @@
+@import './app.common';
+
+mdbutton {
+    // material3 basic design
+    shape: round;
+}
+
+htmllabel,
+canvasview,
+label,
+button,
+textfield,
+mdtextfield,
+mdtextview,
+checkbox,
+mdbutton {
+    ios-a11y-adjusts-font-size: true;
+}
+
+mdcardview {
+    // material3 basic design
+    shape: medium;
+}
+
+.floating-btn {
+    shape: medium;
+    elevation: 2;
+}
+.small-floating-btn {
+    shape: medium;
+    elevation: 2;
+}
+
+mdtextfield[variant=none] {
+    padding:0;
+}
+
+mdtextfield, mdtextview {
+    floating-color: var(--colorPrimary);
+    floating-inactive-color: var(--colorOutline);
+}

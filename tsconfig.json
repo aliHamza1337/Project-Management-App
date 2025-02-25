@@ -1,0 +1,16 @@
+{
+    "extends":"./tools/tsconfig",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["app/*"],
+            "@shared/*": ["./tools/app/*"],
+            "kiss-orm": ["node_modules/@akylas/kiss-orm"],
+            "kiss-orm/*": ["node_modules/@akylas/kiss-orm/*"],
+            "@nativescript/core": ["node_modules/@akylas/nativescript"],
+            "@nativescript/core/*": ["node_modules/@akylas/nativescript/*"]
+        }
+    },
+    "include": ["app/**/*", "tools/app/**/*", "typings/*.d.ts"],
+    "exclude": ["node_modules", "tools/app/db"]
+}
